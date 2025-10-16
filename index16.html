@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMD</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1>LMD (Langage de manipulation de données)</h1>
+    <div class="aff1">
+        <img src="lmd1.png" >
+    </div>
+    <h5>Sélection de données</h5>
+    <p> <span class="a">SELECT</span> <span class="ig">[DISTINCT]</span> expression <span class="ig">[,col,..ou*]</span> <span class="b">FROM</span> nom_tab <span class="mi">[[AS] alias] [,nom_tab2]</span> 
+    <br> <span class="c">[WHERE condition]</span>
+    <br> <span class="c">[GROUP BY critère]</span>
+    <br> <span class="c">[HAVING condition]</span>
+    <br> <span class="c">[ORDER BY <span class="ig">[ASK/DESC]</span> ]</span>
+    </p>
+
+    <table class="tabw">
+    <thead>
+        <tr>
+        <th>Fonction</th>
+        <th>Description</th>
+        <th>Exemple</th>
+        <th>Résultat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>WHERE</td>
+        <td>Filtre les lignes selon une condition</td>
+        <td>SELECT * FROM employés WHERE salaire &gt; 3000;</td>
+        <td>Liste des employés avec un salaire &gt; 3000</td>
+        </tr>
+        <tr>
+        <td>GROUP BY</td>
+        <td>Regroupe les lignes ayant une même valeur dans une colonne</td>
+        <td>SELECT département, COUNT(*) FROM employés GROUP BY département;</td>
+        <td>Nombre d’employés par département</td>
+        </tr>
+        <tr>
+        <td>ORDER BY</td>
+        <td>Trie les résultats selon une ou plusieurs colonnes</td>
+        <td>SELECT * FROM employés ORDER BY salaire DESC;</td>
+        <td>Liste des employés triée par salaire décroissant</td>
+        </tr>
+        <tr>
+        <td>HAVING</td>
+        <td>Filtre les groupes après un GROUP BY</td>
+        <td>SELECT département, AVG(salaire) FROM employés GROUP BY département HAVING AVG(salaire) &gt; 4000;</td>
+        <td>Départements avec un salaire moyen &gt; 4000</td>
+        </tr>
+    </tbody>
+    </table>
+
+
+    <span class="exps">Exemple :</span>
+    <p> <span class="a">SELECT</span> nomElev, PrenomElev <span class="b">FROM</span> élève <span class="mi">WHERE</span> idElev='123';</p> 
+
+    <h5>Insertion des données dans une table</h5>
+    <div class="aff1">
+        <img src="lmd3.png" >
+    </div>  
+    <p> <span class="a">INSERT</span> <span class="ig">INTO</span> nom_table <span class="ig">[(liste colonnes,...)]</span> <span class="b">VALUES</span> (liste valeurs,..)</p>
+    <span class="exps">Exemple :</span>
+    <p> <span class="a">INSERT</span> <span class="ig">INTO</span> élève(idElev, nomElev, PrenomElev) <span class="b">VALUES</span> ('923', 'Samir', 'Lousif');</p>
+
+    <h5>Modification des valeurs d’une colonne</h5>
+    <div class="aff1">
+        <img src="lmd4.png" >
+    </div>  
+    <p> <span class="a">UPDATE</span> nom_table <span class="ig">SET</span> colonne = expression 
+    <br> <span class="c">[WHERE condition]</span>
+    </p>
+    <span class="exps">Exemple :</span>
+    <p> <span class="a">UPDATE</span> élève <span class="ig">SET</span> nomElev = 'Bouheni' <span class="c">WHERE</span> idElev='123' </p>
+
+    <h5>Suppression des enregistrements d’une table</h5>
+    <div class="aff1">
+        <img src="lmd5.png" >
+    </div>  
+    <p> <span class="a">DELETE</span> <span class="b">FROM</span> nom_table 
+    <br> <span class="c">[WHERE condition]</span> </p>
+    <span class="exps">Exemple :</span>
+    <p> <span class="a">DELETE</span> <span class="b">FROM</span> élève <span class="c">WHERE</span> idElev='345' </p> 
+        <h3>Les Fonctions d'Agregation</h3>
+    <table class="tablep">
+    <thead>
+        <tr>
+        <th>Fonction</th>
+        <th>Description</th>
+        <th>Exemple</th>
+        <th>Résultat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>COUNT()</td>
+        <td>Compte le nombre de lignes</td>
+        <td>SELECT COUNT(*) FROM employés;</td>
+        <td>nombre des lignes</td>
+        </tr>
+        <tr>
+        <td>SUM()</td>
+        <td>Calcule la somme d’une colonne numérique</td>
+        <td>SELECT SUM(salaire) FROM employés;</td>
+        <td>Somme des salaires</td>
+        </tr>
+        <tr>
+        <td>AVG()</td>
+        <td>Renvoie la moyenne d’une colonne numérique</td>
+        <td>SELECT AVG(salaire) FROM employés;</td>
+        <td>moyenne des salaires</td>
+        </tr>
+        <tr>
+        <td>MAX()</td>
+        <td>Renvoie la valeur maximale</td>
+        <td>SELECT MAX(salaire) FROM employés;</td>
+        <td>salaire maximale</td>
+        </tr>
+        <tr>
+        <td>MIN()</td>
+        <td>Renvoie la valeur minimale</td>
+        <td>SELECT MIN(salaire) FROM employés;</td>
+        <td>salaire minimale</td>
+        </tr>
+    </tbody>
+    </table>
+    <h3>Les Fonctions de Type DATE</h3>
+        <table class="tabled">
+    <thead>
+        <tr>
+        <th>Fonction</th>
+        <th>Description</th>
+        <th>Exemple</th>
+        <th>Résultat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>DAY()</td>
+        <td>Renvoie le jour du mois (1 à 31)</td>
+        <td>SELECT DAY('2025-10-14');</td>
+        <td>14</td>
+        </tr>
+        <tr>
+        <td>MONTH()</td>
+        <td>Renvoie le mois (1 à 12)</td>
+        <td>SELECT MONTH('2025-10-14');</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>YEAR()</td>
+        <td>Renvoie l’année</td>
+        <td>SELECT YEAR('2025-10-14');</td>
+        <td>2025</td>
+        </tr>
+        <tr>
+        <td>NOW()</td>
+        <td>Renvoie la date et l’heure actuelles</td>
+        <td>SELECT NOW();</td>
+        <td>2025-10-14 12:51:00</td>
+        </tr>
+        <tr>
+        <td>CURDATE()</td>
+        <td>Renvoie la date actuelle (sans l’heure)</td>
+        <td>SELECT CURDATE();</td>
+        <td>2025-10-14</td>
+        </tr>
+        <tr>
+        <td>ADDDATE()</td>
+        <td>Ajoute un nombre de jours à une date</td>
+        <td>SELECT ADDDATE('2025-10-14', 10);</td>
+        <td>2025-10-24</td>
+        </tr>
+        <tr>
+        <td>ADDDATE() avec INTERVAL</td>
+        <td>Ajoute un intervalle spécifique (jours, mois, années...)</td>
+        <td>SELECT ADDDATE('2025-10-14', INTERVAL 2 MONTH);</td>
+        <td>2025-12-14</td>
+        </tr>
+        <tr>
+        <td>DATEDIFF()</td>
+        <td>Calcule la différence en jours entre deux dates</td>
+        <td>SELECT DATEDIFF('2025-10-14', '2025-09-30');</td>
+        <td>14</td>
+        </tr>
+    </tbody>
+    </table>
+    <h5>Jointure</h5>
+    <p>
+        En SQL , une <span class="ig">Jointure</span> est utilisée pour combiner des lignes provenat de deux ou plusieurs tables en fonction d'une condition qui lie les tables, souvent basée sur une relation entre <span class="mi">une clé primaire</span>
+        et <span class="mi">une clé étrangère</span>.<br>
+        Pour faire la jointure ; les tables sont listées dans la clause <span class="ig">FROM</span> , et la condition de jointure est définie dans la clause <span class="mi">WHERE</span>
+    </p>
+    <h3>Syntaxe:</h3>
+    <p>
+        <span class="a">SELECT</span> Colonnes <br>
+        <span class="b">FROM</span> Table1 , Table2 <br>
+        <span class="c">WHERE</span> <span class="ig">Table1.</span>Colonne = <span class="ig">Table2.</span>Colonne ;
+    </p>
+    <h5>On peut Aussi nommer les tables avec <span class="mi">AS</span> :</h5>
+    <p>
+        <span class="a">SELECT</span> Colonnes <br>
+        <span class="b">FROM</span> Table1 <span class="mi">AS</span> A , Table2 <span class="mi">AS</span> B <br>
+        <span class="c">WHERE</span> <span class="ig">A.</span>Colonne = <span class="ig">B.</span>Colonne ;
+    </p>
+    <span class="exps">Exemple :</span>
+    <p>Soient les tables : Clients et Commandes </p>
+    <span class="ig">Clients</span>
+    <table class="commande">
+        <tr>
+            <th>
+                Client ID
+            </th>
+            <th>
+                Nom
+            </th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ahmed</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Layla</td>
+        </tr>
+    </table>
+    <span class="ig">Commandes</span>
+    <table class="commande">
+        <tr>
+            <th>CommandeID</th>
+            <th>ClientID</th>
+            <th>Produit</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>1</td>
+            <td>Ordinateur</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>2</td>
+            <td>Smartphone</td>
+        </tr>
+    </table>
+    <h2>Requéte avec jointure :</h2>
+    <table class="commande">
+        <tr>
+            <td>
+                <p>
+                    <span class="a">SELECT</span> A.Nom <span class="mi">AS Client</span>, C.Produit <br>
+                    <span class="b">FROM</span> Clients <span class="mi">AS</span> A , Commandes <span class="mi">AS</span> C <br>
+                    <span class="c">WHERE</span> <span class="ig">A.</span>ClientID = <span class="ig">C.</span>ClientID ;
+                </p>
+            </td>
+        </tr>
+    </table>
+    
+        <a id="next" href="index9.html">Suivant</a>
+        <a id="prev" href="index15.html">précedent</a>
+    </div>
+</body>
+</html>

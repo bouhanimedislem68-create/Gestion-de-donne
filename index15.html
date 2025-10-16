@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDD</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1>LDD (Une Langage de définition de données)</h1>
+    <h5>Créer une DB</h5>
+    <p> <span class="a">CREATE</span> DATABASE <span class="b">nom</span> </p>
+    <span class="exps">Exemple :</span>
+    <p> <span class="a">CREATE</span> DATABASE <span class="b">Magasin</span> </p>
+    <h5>supprimer une DB</h5>
+    <p> <span class="a">DROP</span> DATABASE <span class="b">nom</span> </p>
+    <span class="exps">Exemple :</span>
+    <p> <span class="a">DROP</span> DATABASE <span class="b">Magasin</span> </p>
+    <hr>
+    <h3>Créer une Table</h3>
+    <p> <span class="a">CREATE</span> TABLE <span class="b">nom-table</span>( 
+    <br> colonne1 <span class="c">type</span> [contrainte],
+    <br> colonne2 <span class="c">type</span> [contrainte],
+    <br>...
+    <br>[CONSTRAINT] [nom] [contrainte],…)
+    </p>
+    <div class="aff1">
+        <table class="table1" >
+            <tr>
+              <th>Type de données</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>INT</td>
+              <td>Entier</td>
+            </tr>
+            <tr>
+              <td>DECIMAL</td>
+              <td>Réel</td>
+            </tr>
+            <tr>
+              <td>CHAR</td>
+              <td>Chaîne de caractères de longueur fixe.</td>
+            </tr>
+            <tr>
+              <td>VARCHAR</td>
+              <td>Chaîne de caractères de longueur variable dont la longueur maximale fixée.</td>
+            </tr>
+            <tr>
+              <td>TEXT</td>
+              <td>Chaîne de caractères de longueur variable.</td>
+            </tr>
+            <tr>
+              <td>DATE</td>
+              <td>Date.</td>
+            </tr>
+            <tr>
+              <td>TIME</td>
+              <td>Temps.</td>
+            </tr>
+            <tr>
+              <td>DATETIME</td>
+              <td>Date et Heure.</td>
+            </tr>
+          </table>
+    </div>
+    <hr>
+    <h3>Contrainte</h3>
+    <table class="table2" >
+        <tr>
+          <th>Contrainte</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>NOT NULL</td>
+          <td>Garantit qu'une colonne ne peut pas avoir la valeur NULL.</td>
+        </tr>
+        <tr>
+          <td>DEFAULT</td>
+          <td>Fournit une valeur par défaut pour une colonne lorsqu'aucune n'est spécifiée.</td>
+        </tr>
+        <tr>
+          <td>UNIQUE</td>
+          <td>Garantit que toutes les valeurs d'une colonne sont différentes.</td>
+        </tr>
+        <tr>
+          <td>PRIMARY KEY</td>
+          <td>Identifie de manière unique chaque ligne/enregistrement dans une table de BD.</td>
+        </tr>
+        <tr>
+          <td>CHECK</td>
+          <td>Garantit que toutes les valeurs d'une colonne satisfont à certaines conditions.</td>
+        </tr>
+      </table>
+    <span class="exps">Exemples des tables :</span>
+    <div class="aff1">
+        <img src="expt0.png" >
+        <img src="expt1.png" >
+    </div>
+    <hr>
+    <h5>Ajouter une colonne à une table</h5>
+    <p>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> table1 <br>
+        <span class="c">ADD colonne</span> <span class="im">type</span> [contrainte];
+    </p>
+    <h5>Supprimer une colonne à une table</h5>
+    <p>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> table1 <br>
+        <span class="c">DROP colonne</span> <span class="im">type</span> [contrainte];
+    </p>
+    <p>
+        <span class="exps">Exemple:</span>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> Article <br>
+        <span class="c">DROP</span> poids <span class="im">DECIMAL</span> ;
+    </p>
+    <h5>Modifier le type d’une colonne</h5>
+    <p>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> table1 <br>
+        <span class="c">MODIFY colonne</span> <span class="im">type</span> [contrainte];
+    </p>
+    <p>
+        <span class="exps">Exemple:</span>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> Fournisseur <br>
+        <span class="c">MODIFY</span> NOM_fr <span class="im">VARCHAR(30)</span> ;
+    </p>
+    <h5>Changer le type d’une colonne</h5>
+    <p>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> table1 <br>
+        <span class="c">CHANGE</span> nom_1 nom_2 <span class="im">type</span> [contrainte];
+    </p>
+    <p>
+        <span class="exps">Exemple:</span>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> Fournisseur <br>
+        <span class="c">CHANGE</span> NOM_fr Libelle_Fr <span class="im">VARCHAR(10)</span> ;
+    </p>
+    <h5>Ajouter une contrainte sur une colonne d’une table</h5>
+    <p>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> table1 <br>
+        <span class="c">ADD</span> <span class="d">CONSTRAINT</span> <span class="im">nom</span> [contrainte];
+    </p>
+    <p>
+        <span class="exps">Exemple:</span>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> Article <br>
+        <span class="c">ADD</span> <span class="d">CONSTRAINT</span> <span class="im">NN1</span> CHECK (POIDS>0);
+    </p>
+    <h5>Supprimer une contrainte</h5>
+    <p>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> table1 <br>
+        <span class="c">DROP</span> <span class="d">CONSTRAINT</span> <span class="im">nom</span>;
+    </p>
+    <p>
+        <span class="exps">Exemple:</span>
+        <span class="a">ALTER</span> <span class="b">TABLE</span> Article <br>
+        <span class="c">DROP</span> <span class="d">CONSTRAINT</span> <span class="im">NN1</span>;
+    </p>
+    <div class="book">
+        <a id="next" href="index16.html">Suivant</a>
+        <a id="prev" href="index14.html">précedent</a>
+    </div>
+</body>
+</html>

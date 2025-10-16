@@ -1,0 +1,304 @@
+.aff1 img{
+    animation-name: bording;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-direction: alternate-reverse;
+    display: inline-block; 
+    border-radius: 10px;
+    border: 5px solid transparent;
+    width: 40%;
+    height: 21%;
+    margin-left: 30%;
+    background-image: url(pic1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;   
+}
+.table1 th{
+    margin: 10%;
+    color: darkgreen;
+    background-color: lightgreen;
+    border: 5px solid black;
+}
+.table1 td{
+    margin: 10%;
+    background-color:hsla(180, 100%, 97%, 0.588);
+    color: green;
+    border: 5px solid black;
+}
+.table1{
+    margin: auto;
+    border-radius: 5px;
+    border: 5px solid black;
+    border-collapse: collapse;
+}
+.tabled th{
+    margin: 10%;
+    color: darkgoldenrod;
+    background-color: lightgoldenrodyellow;
+    border: 5px solid black;
+}
+.tabled td{
+    margin: 10%;
+    background-color:hsla(180, 100%, 97%, 0.588);
+    color: yellow;
+    border: 5px solid black;
+}
+.tabled{
+    margin: auto;
+    border-radius: 5px;
+    border: 5px solid black;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.tabw th{
+    margin: 10%;
+    color: orangered;
+    background-color: rgb(248, 156, 156);
+    border: 5px solid black;
+}
+.tabw td{
+    width: auto;
+    margin: 10%;
+    background-color:hsla(180, 100%, 97%, 0.588);
+    color: darkred;
+    border: 5px solid black;
+}
+.tabw{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 5px solid black;
+    border-collapse: collapse;
+}
+.commande th{
+    margin: 10%;
+    color:antiquewhite;
+    background-color:burlywood;
+    border: 5px solid black;
+}
+.commande td{
+    width: auto;
+    margin: 10%;
+    background-color:hsla(180, 100%, 97%, 0.588);
+    color: white;
+    border: 5px solid black;
+}
+.commande{
+    margin: auto;
+    border-radius: 5px;
+    border: 5px solid black;
+    border-collapse: collapse;
+}
+.tablep th{
+    margin: 10%;
+    color: darkblue;
+    background-color: lightblue;
+    border: 5px solid black;
+}
+.tablep td{
+    margin: 10%;
+    background-color:hsla(180, 100%, 97%, 0.588);
+    color: blue;
+    border: 5px solid black;
+}
+.tablep{
+    margin: auto;
+    border-radius: 5px;
+    border: 5px solid black;
+    border-collapse: collapse;
+}
+.table2 th{
+    margin: 10%;
+    color: darkred;
+    background-color: hsla(0, 0%, 100%, 0.71);
+    border: 5px solid gray;
+}
+.table2 td{
+    margin: 10%;
+    background-color:lightpink;
+    color: red;
+    border: 5px solid gray;
+}
+.table2{
+    border-radius: 5px;
+    border: 5px solid gray;
+    border-collapse: collapse;
+    margin: auto;
+}
+#next,#prev{
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    color: aliceblue;
+    background-color: chocolate;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+#next:hover,#prev:hover{
+    background-color: darkorange;
+    color: red;
+}
+@keyframes bording {
+    0%{border: 5px solid rgb(221, 102, 221);}
+    50%{border: 5px solid darkviolet;}
+    100%{border: 5px solid rgb(63, 0, 63);}
+}
+.aff1{
+    margin-left: auto;
+    display: block;
+    width: auto;
+    height: auto;
+}
+.infor{
+    margin-top: 10px;
+}
+.infor span{
+    background-color: steelblue;
+    padding: 10px;
+    color: yellowgreen;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+figcaption{
+    color: goldenrod;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    font-size: medium;
+    text-align: center;
+}
+h5{
+    font-size: x-large;
+    text-align: center;
+    color:yellow;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+h6{
+    font-size: medium;
+    text-align: center;
+    color:teal;
+}
+h3{
+    font-size: x-large;
+    text-align: center;
+    color:lightskyblue;
+}
+h1{
+    text-align: center;
+    color:crimson;
+}
+ul{
+    list-style-image: url(icons8-asterisk-15.png);
+}
+li{
+    font-size: larger;
+    margin-top: 3px;
+    text-align: justify;
+    margin-left: 2%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:azure;
+}
+p{
+    font-size: larger;
+    margin-top: 7px;
+    font-weight: bold;
+    margin-left: 5%;
+    text-align: justify;
+    font-family:'Courier New', Courier, monospace;
+    color: aliceblue;
+    
+}
+h2{
+    text-decoration: underline;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.exps{
+    margin-top: 5px;
+    background-color: transparent;
+    padding:0;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.a{
+    background-color: transparent;
+    color: rgb(177, 9, 118);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.b{
+    background-color: transparent;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: yellowgreen;
+}
+.c{
+    background-color: transparent;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: lightskyblue;
+}
+.d{
+    background-color: transparent;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:tomato;
+}
+.ph1{
+    font-family: serif;
+    color: gray;
+}
+ol li{
+    color: violet;
+    font-size: large;
+    font-family: monospace;
+}
+.L{
+    background-color: transparent;
+    font-size: xx-large;
+    color: greenyellow;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+.mq{
+    margin-top: 5px;
+    color: bisque;
+    background-color: violet;
+    padding: 2px;
+    border-radius: 1px;
+}
+span{
+    margin: 0;
+    background-color: goldenrod;
+    padding:3px;
+    color: aliceblue;
+    font-family: cursive;
+}
+.ig{
+    margin: 5px;
+    background-color: transparent;
+    padding:0;
+    color: lightcoral;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: cursive;
+}
+.Etablissement{
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.mi{
+    margin: 5px;
+    background-color: transparent;
+    padding:0;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation-name: rainbow2;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes rainbow2 {
+    from{color: royalblue;}
+    to{color:skyblue}
+}
+#im10{
+    margin-top: 10%;
+    transform: scale(1.25);
+}
