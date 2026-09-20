@@ -69,6 +69,222 @@ const questions = [
       answers: ["Base hiérarchique", "Base graphique", "Base sonore", "Base relationelle"], 
       correct: 3
     }
+    ```javascript
+    { 
+      question: "Quelle clause permet de sélectionner uniquement les lignes qui respectent une condition ?", 
+      answers: ["SELECT", "WHERE", "ORDER BY", "GROUP BY"], 
+      correct: 1 
+    },
+
+    { 
+      question: "Quelle clause permet de trier les résultats d'une requête ?", 
+      answers: ["WHERE", "GROUP BY", "ORDER BY", "HAVING"], 
+      correct: 2 
+    },
+
+    { 
+      question: "Quel mot-clé permet d'éviter les doublons dans le résultat d'une requête ?", 
+      answers: ["UNIQUE", "DISTINCT", "ONLY", "DIFFERENT"], 
+      correct: 1 
+    },
+
+    { 
+      question: "Quelle fonction permet de compter le nombre de lignes ?", 
+      answers: ["SUM()", "COUNT()", "AVG()", "TOTAL()"], 
+      correct: 1 
+    },
+
+    { 
+      question: "Quelle fonction permet de calculer la moyenne d'une colonne numérique ?", 
+      answers: ["SUM()", "COUNT()", "AVG()", "MOY()"], 
+      correct: 2 
+    },
+
+    { 
+      question: "Quelle fonction permet d'obtenir la plus grande valeur d'une colonne ?", 
+      answers: ["MAX()", "HIGH()", "TOP()", "UP()"], 
+      correct: 0 
+    },
+
+    { 
+      question: "Quelle fonction permet d'obtenir la plus petite valeur d'une colonne ?", 
+      answers: ["MIN()", "LOW()", "SMALL()", "BOTTOM()"], 
+      correct: 0 
+    },
+
+    { 
+      question: "Quelle fonction permet de calculer la somme des valeurs d'une colonne ?", 
+      answers: ["TOTAL()", "ADD()", "SUM()", "COUNT()"], 
+      correct: 2 
+    },
+
+    { 
+      question: "Quelle clause permet de regrouper les lignes ayant une même valeur ?", 
+      answers: ["GROUP BY", "ORDER BY", "WHERE", "HAVING"], 
+      correct: 0 
+    },
+
+    { 
+      question: "Quelle clause permet de filtrer les groupes obtenus avec GROUP BY ?", 
+      answers: ["WHERE", "HAVING", "FILTER", "ORDER BY"], 
+      correct: 1 
+    },
+
+    { 
+      question: "Quelle commande permet d'insérer une nouvelle ligne dans une table ?", 
+      answers: ["ADD", "INSERT INTO", "UPDATE", "CREATE"], 
+      correct: 1 
+    },
+
+    { 
+      question: "Quelle commande permet de modifier des données existantes ?", 
+      answers: ["ALTER", "CHANGE", "UPDATE", "MODIFY TABLE"], 
+      correct: 2 
+    },
+
+    { 
+      question: "Quelle commande permet de supprimer certaines lignes d'une table ?", 
+      answers: ["REMOVE", "DELETE", "DROP", "CLEAR"], 
+      correct: 1 
+    },
+
+    { 
+      question: "Quelle commande permet de créer une nouvelle table ?", 
+      answers: ["NEW TABLE", "CREATE TABLE", "MAKE TABLE", "ADD TABLE"], 
+      correct: 1 
+    },
+
+    { 
+      question: "Quelle commande permet de supprimer complètement une table ?", 
+      answers: ["DELETE TABLE", "REMOVE TABLE", "DROP TABLE", "CLEAR TABLE"], 
+      correct: 2 
+    },
+
+    { 
+      question: "Quelle contrainte interdit l'utilisation de la valeur NULL dans une colonne ?", 
+      answers: ["UNIQUE", "CHECK", "NOT NULL", "DEFAULT"], 
+      correct: 2 
+    },
+
+    { 
+      question: "Quelle contrainte permet de garantir que les valeurs d'une colonne sont différentes ?", 
+      answers: ["CHECK", "UNIQUE", "DEFAULT", "NOT NULL"], 
+      correct: 1 
+    },
+
+    { 
+      question: "Quelle contrainte permet de vérifier qu'une valeur respecte une condition ?", 
+      answers: ["CHECK", "UNIQUE", "DEFAULT", "FOREIGN KEY"], 
+      correct: 0 
+    },
+
+    { 
+      question: "Quel est le rôle d'une clé étrangère ?", 
+      answers: [
+        "Identifier obligatoirement chaque ligne",
+        "Créer une relation entre deux tables",
+        "Trier les données",
+        "Supprimer les doublons"
+      ], 
+      correct: 1 
+    },
+
+    { 
+      question: "Dans une requête utilisant plusieurs tables, où place-t-on généralement les conditions de liaison entre les tables avec la méthode étudiée ?", 
+      answers: ["SELECT", "FROM", "WHERE", "ORDER BY"], 
+      correct: 2 
+    },
+
+    { 
+      question: "Quelle requête permet de relier les tables CLIENT et COMMANDE par l'identifiant du client ?", 
+      answers: [
+        "SELECT * FROM CLIENT C, COMMANDE CO WHERE C.id = CO.id_client",
+        "SELECT * FROM CLIENT C, COMMANDE CO ORDER BY C.id = CO.id_client",
+        "SELECT CLIENT + COMMANDE WHERE id",
+        "SELECT * FROM CLIENT WHERE COMMANDE"
+      ], 
+      correct: 0 
+    },
+
+    { 
+      question: "Si une requête contient FROM CLIENT C, COMMANDE CO, cela signifie que :", 
+      answers: [
+        "Une seule table est utilisée",
+        "Deux tables sont utilisées dans la requête",
+        "Une nouvelle table est créée",
+        "Les deux tables sont supprimées"
+      ], 
+      correct: 1 
+    },
+
+    { 
+      question: "Dans une requête SQL, quelle partie indique les tables utilisées ?", 
+      answers: ["SELECT", "FROM", "WHERE", "HAVING"], 
+      correct: 1 
+    },
+
+    { 
+      question: "Dans une requête SQL, quelle partie indique les colonnes à afficher ?", 
+      answers: ["FROM", "WHERE", "SELECT", "GROUP BY"], 
+      correct: 2 
+    },
+
+    { 
+      question: "Que signifie SELECT * ?", 
+      answers: [
+        "Sélectionner uniquement la première colonne",
+        "Sélectionner toutes les colonnes",
+        "Sélectionner uniquement les lignes vides",
+        "Supprimer toutes les colonnes"
+      ], 
+      correct: 1 
+    },
+
+    { 
+      question: "Que signifie l'opérateur SQL BETWEEN ?", 
+      answers: [
+        "Tester si une valeur est comprise dans un intervalle",
+        "Comparer deux tables",
+        "Chercher une valeur NULL",
+        "Supprimer un intervalle de valeurs"
+      ], 
+      correct: 0 
+    },
+
+    { 
+      question: "Quel opérateur permet de rechercher plusieurs valeurs possibles ?", 
+      answers: ["LIKE", "IN", "BETWEEN", "IS"], 
+      correct: 1 
+    },
+
+    { 
+      question: "Quel opérateur permet de rechercher une chaîne correspondant à un modèle ?", 
+      answers: ["LIKE", "MATCH", "SEARCH", "PATTERN"], 
+      correct: 0 
+    },
+
+    { 
+      question: "Dans une condition LIKE 'A%', que représente le symbole % ?", 
+      answers: [
+        "Un seul caractère",
+        "Zéro ou plusieurs caractères",
+        "Uniquement un chiffre",
+        "Une valeur NULL"
+      ], 
+      correct: 1 
+    },
+
+    { 
+      question: "Que permet de tester l'expression IS NULL ?", 
+      answers: [
+        "Si une valeur est égale à zéro",
+        "Si une valeur est vide ou NULL",
+        "Si une valeur est négative",
+        "Si une valeur est unique"
+      ], 
+      correct: 1 
+    }
+```
   ];
   
   let currentQuestionIndex = 0;
