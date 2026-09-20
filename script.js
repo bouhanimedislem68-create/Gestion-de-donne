@@ -68,8 +68,7 @@ const questions = [
       question: "Quel type de BD organise les données sous forme de tables reliées entre eux ?", 
       answers: ["Base hiérarchique", "Base graphique", "Base sonore", "Base relationelle"], 
       correct: 3
-    }
-    ```javascript
+    },
     { 
       question: "Quelle clause permet de sélectionner uniquement les lignes qui respectent une condition ?", 
       answers: ["SELECT", "WHERE", "ORDER BY", "GROUP BY"], 
@@ -284,7 +283,6 @@ const questions = [
       ], 
       correct: 1 
     }
-```
   ];
   
   let currentQuestionIndex = 0;
