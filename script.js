@@ -327,7 +327,7 @@ const questions = [
     }
     currentQuestionIndex++;
     if (currentQuestionIndex >= questions.length) {
-      alert("Quizz terminé! vous avez "+score+" sur 14 réponses justes.");
+      alert("Quizz terminé ! Vous avez " + score + " sur " + questions.length + " réponses justes.");
       currentQuestionIndex = 0; 
     }
     loadQuestion();
