@@ -1,57 +1,96 @@
+```css
 body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
   background-color: darkslateblue;
 }
-/*boutons*/
-#question{
+
+/* Question */
+#question {
   font-size: x-large;
-  color:darkslategray;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: darkslategray;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
+  margin-bottom: 20px;
 }
-#answer{
+
+/* Réponses */
+#answers {
   color: slateblue;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+/* Conteneur du quiz */
 #qm {
-  height: 60%;
   width: 45%;
+  min-height: 60%;
+  max-height: 90vh;
   text-align: center;
   background: lightslategrey;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}  
-button {
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Boutons de réponses */
+#answers button {
   display: block;
-  margin: 10px;
+  width: 90%;
+  margin: 10px auto;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
-button:hover{
+
+button:hover {
   filter: brightness(85%);
 }
+
 button.correct {
   background-color: darkgreen;
   color: white;
-} 
+}
+
 button.incorrect {
   background-color: darkred;
   color: azure;
-} 
+}
+
+/* Bouton question suivante */
 button#next-btn {
-  margin-top: 20px;
+  margin: 20px auto 0;
   padding: 10px 20px;
   background-color: darkorchid;
   color: white;
-}  
+}
+
 button#next-btn:hover {
   background-color: darkmagenta;
   color: gray;
 }
+
+/* Adaptation téléphone */
+@media (max-width: 700px) {
+  #qm {
+    width: 90%;
+    min-height: 70%;
+    max-height: 95vh;
+  }
+
+  #question {
+    font-size: large;
+  }
+
+  #answers button {
+    width: 95%;
+  }
+}
+```
