@@ -282,7 +282,7 @@ const questions = [
         "Si une valeur est unique"
       ], 
       correct: 1 
-    }
+    },
   ];
   
   let currentQuestionIndex = 0;
