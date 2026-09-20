@@ -436,3 +436,169 @@ span:nth-child(25){
     90%{transform: translateY(0);}
     100%{transform: translateY(0);}
 }
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* Prevent horizontal scrolling */
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Background video */
+    #bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Header */
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 200%;
+        line-height: 1.2;
+        margin: 15px 0;
+    }
+
+    header h2 {
+        font-size: 110%;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    /* Main layout */
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Navigation */
+    nav {
+        float: none;
+        width: 94%;
+        height: auto;
+        margin: 10px auto;
+        padding: 5px 0;
+        border-radius: 12px;
+    }
+
+    nav ul {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    nav hr {
+        width: 85%;
+        margin: 5px auto;
+    }
+
+    /* Content / iframe */
+    aside {
+        float: none;
+        width: 94%;
+        height: 550px;
+        margin: 10px auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border-width: 3px;
+    }
+
+    /* Dropdown */
+    .dropmenu {
+        position: static;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .dropmenu ul {
+        width: 100%;
+    }
+
+    .dropmenu li a {
+        font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    footer img {
+        float: none;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    /* Welcome animation */
+    .intro h2 {
+        font-size: 24px;
+        padding-top: 50%;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 170%;
+    }
+
+    header h2 {
+        font-size: 100%;
+    }
+
+    nav {
+        width: 96%;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    aside {
+        width: 96%;
+        height: 500px;
+    }
+
+    iframe {
+        border-width: 2px;
+    }
+}
